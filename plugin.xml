@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.intel.GooglePlayGamesPlugin"
+    version="1.0.0">
+
+    <name>GooglePlayGamesPlugin</name>
+
+    <description>GooglePlayGamesPlugin</description>
+
+    <author>Ian Maffett</author>
+
+    <keywords>GooglePlayGamesPlugin</keywords>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <license>MIT</license>
+
+    <js-module src="www/GooglePlayGamesPlugin.js" name="GooglePlayGamesPlugin">
+        <clobbers target="window.GooglePlayGamesPlugin" />
+    </js-module>
+
+    <preference name="GPSAPPID" />
+    <!-- android -->
+    <platform name="android">
+
+        <!-- android-support-v4.jar include-->
+        <dependency id="android.support.v4" url="https://github.com/MobileChromeApps/cordova-plugin-android-support-v4" commit="8670959210f07f5a483e40b7fbfdb8ca5a50d3ff" />
+
+        <!-- google-play-services.jar include version 5089000 -->
+        <dependency id="com.google.playservices" url="https://github.com/MobileChromeApps/google-play-services" commit="00f511a8ce332d4586f067240460bfe978ace2ae" />
+
+
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="GooglePlayGamesPlugin" >
+                <param name="android-package" value="com.intel.GooglePlayGamesPlugin"/>
+            </feature>
+        </config-file>
+
+        <config-file target="res/values/strings.xml" parent="/*">
+             <string name="google_play_services_app_id">$GPSAPPID</string>
+             <integer name="google_play_services_version">5089000</integer>
+        </config-file>
+
+        <source-file src="src/android/gamehelper_strings.xml" target-dir="res/values" />
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <meta-data android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version"/>
+            <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+            <activity android:name="com.intel.GooglePlayGamesService">
+        </activity>
+            <meta-data android:name="com.google.android.gms.games.APP_ID" android:value="@string/google_play_services_app_id" />
+        </config-file>
+
+
+        <source-file src="src/android/GooglePlayGamesService.java"
+            target-dir="src/com/intel"/>
+        <source-file src="src/android/GooglePlayGamesPlugin.java"
+            target-dir="src/com/intel"/>
+        <source-file src="src/android/com/google/example/games/basegameutils/BaseGameActivity.java"
+            target-dir="src/com/google/example/games/basegameutils"/>
+        <source-file src="src/android/com/google/example/games/basegameutils/GameHelper.java"
+            target-dir="src/com/google/example/games/basegameutils"/>
+            <source-file src="src/android/com/google/example/games/basegameutils/GameHelperUtils.java"
+            target-dir="src/com/google/example/games/basegameutils"/>
+    </platform>
+
+</plugin>
