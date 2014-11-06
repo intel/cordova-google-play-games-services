@@ -18,20 +18,19 @@
 
     <license>MIT</license>
 
-    <js-module src="www/GooglePlayGamesPlugin.js" name="GooglePlayGamesPlugin">
-        <clobbers target="window.GooglePlayGamesPlugin" />
-    </js-module>
 
     <preference name="GPSAPPID" />
     <!-- android -->
     <platform name="android">
+        <js-module src="www/GooglePlayGamesPlugin.js" name="GooglePlayGamesPlugin">
+            <clobbers target="window.GooglePlayGamesPlugin" />
+        </js-module>
 
         <!-- android-support-v4.jar include-->
         <dependency id="android.support.v4" url="https://github.com/MobileChromeApps/cordova-plugin-android-support-v4" commit="8670959210f07f5a483e40b7fbfdb8ca5a50d3ff" />
 
         <!-- google-play-services.jar include version 5089000 -->
         <dependency id="com.google.playservices" url="https://github.com/MobileChromeApps/google-play-services" commit="00f511a8ce332d4586f067240460bfe978ace2ae" />
-
 
 
         <config-file target="res/xml/config.xml" parent="/*">
@@ -69,4 +68,11 @@
             target-dir="src/com/google/example/games/basegameutils"/>
     </platform>
 
+
+    <platform name="ios">
+        <dependency id="jp.wizcorp.phonegap.plugin.gameCenterPlugin" url="https://github.com/Wizcorp/phonegap-plugin-gameCenter" />
+         <js-module src="www/iOSGooglePlayGamesPlugin.js" name="GooglePlayGamesPlugin">
+            <clobbers target="window.GooglePlayGamesPlugin" />
+        </js-module>
+    </platform>
 </plugin>
