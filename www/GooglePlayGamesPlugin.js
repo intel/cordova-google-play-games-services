@@ -21,6 +21,9 @@ var GooglePlayGamesPlugin = {
     addAchievement:function(achievement_id,s,f) {
         return cordova.exec(s, f, "GooglePlayGamesPlugin", "addAchievement",[achievement_id]);
     },
+	incrementAchievement:function(achievement_id,value,s,f) {
+        return cordova.exec(s, f, "GooglePlayGamesPlugin", "incrementAchievement",[achievement_id,value]);
+    },
     showLeaderboard:function(leaderboard_id,s,f){
         return cordova.exec(s, f, "GooglePlayGamesPlugin", "showLeaderboard",[leaderboard_id]);
     },
