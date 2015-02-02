@@ -150,6 +150,25 @@ public class GooglePlayGamesPlugin extends CordovaPlugin {
     		cb.sendPluginResult(new PluginResult(PluginResult.Status.OK,"-1"));
     		return true;
         }
+		else if(action.equals("incrementAchievement")){
+        	if(!isSignedIn()){
+        		cb.sendPluginResult(new PluginResult(PluginResult.Status.ERROR,"1"));
+        		return true;
+        	}
+        	if(args.length()==0) return false;
+    		String achievementId="";
+			int value=0;
+    		try {
+    			achievementId=args.get(0).toString();
+				value=Integer.parseInt(args.get(1).toString());
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				return false;
+			}
+    		Games.Achievements.increment(getApiClient(), achievementId, value);
+    		cb.sendPluginResult(new PluginResult(PluginResult.Status.OK,"-1"));
+    		return true;
+        }
         else if(action.equals("showLeaderboard"))
         {
         	if(!isSignedIn()){
