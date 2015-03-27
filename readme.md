@@ -21,7 +21,7 @@ Fill out the information and type and hit "Save".  On the next page, you will se
 ##Installing plugin
 
 ```
-cordova plugin add com.intel.googleolaygameservices --variable GPSAPPID=“_APPID_”
+cordova plugin add com.intel.googleplaygameservices --variable GPSAPPID=“_APPID_”
 ```
 
 This will install the plugin, and dependencies in your app.  The GPSAPPID is the Application ID you get from Google Play Dashboard when authorizing your application.
@@ -30,7 +30,7 @@ This will install the plugin, and dependencies in your app.  The GPSAPPID is the
 To install in the Intel® XDK add the following to your intelxdk.config.additions.xml
 
 ```
-<intelxdk:plugin intelxdk:name="googleolaygameservices" intelxdk:value="http://...">
+<intelxdk:plugin intelxdk:name="googleplaygameservices" intelxdk:value="http://...">
     <intelxdk:param intelxdk:name="GPSAPPID" intelxdk:value="_APPID_" />
 </intelxdk:plugin>
 
