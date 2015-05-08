@@ -2,11 +2,11 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.intel.googleplaygamesplugin"
-    version="1.0.2">
+    version="1.0.3">
 
     <name>GooglePlayGamesPlugin</name>
 
-    <description>GooglePlayGamesPlugin</description>
+    <description>Google Play Games Plugin</description>
 
     <author>Ian Maffett</author>
 
@@ -20,10 +20,16 @@
 
 
     <preference name="GPSAPPID" />
+
+
+     <js-module src="www/GooglePlayGamesCore.js" name="GooglePlayGamesPluginCore">
+            <clobbers target="window.GooglePlayGamesPlugin" />
+    </js-module>
+
     <!-- android -->
     <platform name="android">
-        <js-module src="www/GooglePlayGamesPlugin.js" name="GooglePlayGamesPlugin">
-            <clobbers target="window.GooglePlayGamesPlugin" />
+        <js-module src="www/AndroidGooglePlayGamesPlugin.js" name="GooglePlayGamesPlugin">
+            <merges target="window.GooglePlayGamesPlugin" />
         </js-module>
 
         <!-- android-support-v4.jar include-->
@@ -72,7 +78,7 @@
     <platform name="ios">
         <dependency id="jp.wizcorp.phonegap.plugin.gameCenterPlugin" url="https://github.com/Wizcorp/phonegap-plugin-gameCenter" />
          <js-module src="www/iOSGooglePlayGamesPlugin.js" name="GooglePlayGamesPlugin">
-            <clobbers target="window.GooglePlayGamesPlugin" />
+            <merges target="window.GooglePlayGamesPlugin" />
         </js-module>
     </platform>
 </plugin>

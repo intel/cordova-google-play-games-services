@@ -1,0 +1,32 @@
+{
+    "version": "1.0.3",
+    "name": "com.intel.googleplaygamesplugin",
+    "cordova_name": "googleplaygamesplugin",
+    "description": "googleplaygamesplugin",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/01org/cordova-google-play-games-services.git"
+    },
+    "bugs": "https://github.com/01org/cordova-google-play-games-services/issues",
+    "author": {
+        "name": "Ian Maffett - Intel",
+        "url": "https://software.intel.com/en-us/html5/tools"
+    },
+    "keywords": [
+        "Google Play Games",
+        "Games",
+        "Leader boards",
+        "Leaderboards"
+    ],
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ]
+}

@@ -67,6 +67,24 @@ showLeaderboardScore(leaderboard_id,success,failure)
                                     new activity that gets launched
 
 
+saveGame(id,data)
+                            Save a game to local storage.  Id is the key and data is JSON data
+                            If no id is specficied, we use only one save game slot named "default"
+                            If an entry exists, we overwrite the data
+
+loadSavedGame(id)
+                            Load a saved games data.
+                            If no id is specified, we load the "default" saved game state.
+
+deleteSavedGame(id)
+                            Delete a saved game from local storage.
+                            If no id is specified, we delete the "default" saved game state.
+
+getAllSavedGames()
+                            Returns an object with all the saved games.
+                            The key is the id used to save.
+
+
 ```
 
 
