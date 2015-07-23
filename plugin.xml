@@ -76,7 +76,7 @@
 
 
     <platform name="ios">
-        <dependency id="jp.wizcorp.phonegap.plugin.gameCenterPlugin" url="https://github.com/Wizcorp/phonegap-plugin-gameCenter" />
+        <dependency id="jp.wizcorp.phonegap.plugin.gameCenterPlugin" url="https://github.com/Wizcorp/phonegap-plugin-gameCenter" commit="d76b8c833be75c9406dd4c6f9077403aef4ad73e" />
          <js-module src="www/iOSGooglePlayGamesPlugin.js" name="GooglePlayGamesPlugin">
             <merges target="window.GooglePlayGamesPlugin" />
         </js-module>
