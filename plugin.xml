@@ -2,7 +2,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.intel.googleplaygamesplugin"
-    version="1.0.4">
+    version="1.0.5">
 
     <name>GooglePlayGamesPlugin</name>
 
@@ -76,7 +76,7 @@
 
 
     <platform name="ios">
-        <dependency id="jp.wizcorp.phonegap.plugin.gameCenterPlugin" url="https://github.com/Wizcorp/phonegap-plugin-gameCenter" commit="d76b8c833be75c9406dd4c6f9077403aef4ad73e" />
+        <dependency id="cordova-plugin-gamecenter" url="https://github.com/Wizcorp/cordova-plugin-gameCenter" />
          <js-module src="www/iOSGooglePlayGamesPlugin.js" name="GooglePlayGamesPlugin">
             <merges target="window.GooglePlayGamesPlugin" />
         </js-module>
