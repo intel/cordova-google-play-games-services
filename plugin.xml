@@ -2,7 +2,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.intel.googleplaygamesplugin"
-    version="1.0.5">
+    version="1.0.6">
 
     <name>GooglePlayGamesPlugin</name>
 
@@ -47,7 +47,6 @@
 
         <config-file target="res/values/strings.xml" parent="/*">
              <string name="google_play_services_app_id">$GPSAPPID</string>
-             <integer name="google_play_services_version">6171000</integer>
         </config-file>
 
         <source-file src="src/android/gamehelper_strings.xml" target-dir="res/values" />
