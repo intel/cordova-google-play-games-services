@@ -32,11 +32,12 @@
             <merges target="window.GooglePlayGamesPlugin" />
         </js-module>
 
-        <!-- android-support-v4.jar include-->
-        <dependency id="android.support.v4" url="https://github.com/MobileChromeApps/cordova-plugin-android-support-v4"  />
 
-        <!-- google-play-services.jar include version 5089000 -->
-        <dependency id="com.google.playservices" url="https://github.com/MobileChromeApps/google-play-services" commit="1f56399572d255193f8f9564843df60e50938e69" />
+        <framework src="com.android.support:support-v4:+" />
+
+
+        <framework src="com.google.android.gms:play-services-games:8.3.0" />
+        <framework src="com.google.android.gms:play-services-plus:8.3.0" />
 
 
         <config-file target="res/xml/config.xml" parent="/*">
