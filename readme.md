@@ -1,24 +1,24 @@
-#Cordova Google Play Games Services + iOS Game Center
+# Cordova Google Play Games Services + iOS Game Center
 
 This plugin is for Cordova Android apps to enable limitted Google Play Games Services API and iOS Game Center
 
-##iOS support
+## iOS support
 
 iOS support has been added through a dependency of <a href="https://github.com/Wizcorp/phonegap-plugin-gameCenter">https://github.com/Wizcorp/phonegap-plugin-gameCenter</a> .  We have wrapped the API calls to match below.  See the plugin for configuration details.
 
-##Usage
+## Usage
 
 Follow the instructions here on setting up your app in Google Play Dashboard.  Make sure you have your application ID for installation.
 
 Please see <a href="https://developers.google.com/games/services/console/enabling" target="_blank">the instructions</a> online for getting the app id.
 
-##Short version
+## Short version
 
 Go into the Google Play Developer Console -> Game Services -> Add New Game
 
 Fill out the information and type and hit "Save".  On the next page, you will see the title and a number next to it.  That number is your App Id
 
-##Installing plugin
+## Installing plugin
 
 ```
 cordova plugin add com.intel.googleplaygameservices --variable GPSAPPID=“_APPID_”
@@ -36,7 +36,7 @@ To install in the Intel® XDK add the following to your intelxdk.config.addition
 
 ```
 
-###API
+### API
 The JavaScript API is below.  Everything is called on the GooglePlayGamesPlugin object
 
 ```
@@ -88,12 +88,12 @@ getAllSavedGames()
 ```
 
 
-###NOTES
+### NOTES
 
 Achievements and leaderboards are created in the Google Play Dashboard.  They will give you a string parameter for you to call the functions with.
 
 
-###Testing
+### Testing
 
 To test your app, you must build your application and submit it as an Alpha APK.  Next go to go to Google Play Developer Console -> Game Services  and link your application to the game service you created.  After they are linked, you can enable testing for both.
 
@@ -102,7 +102,7 @@ https://developers.google.com/games/services/console/testpub#enabling_accounts_f
 Make sure in the game service you created, you have also added the user under "Testing"
 
 
-###Adding API's
+### Adding API's
 
 This is a small subset of the Google Play Games Services API, but can easily be extended.  Feel free to fork and contribute extended the API's.  Any API's that reuqire a new activity, like logging in, should be implemented in GooglePlayGamesServices.java .  All other API's can be added to GooglePlayGamesPlugin.java
 
